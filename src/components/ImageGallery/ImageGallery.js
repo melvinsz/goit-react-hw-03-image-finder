@@ -1,6 +1,6 @@
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({ images, onClickImage }) => {
   return (
     <ul className="gallery">
       {images.map(image => (
@@ -8,6 +8,7 @@ const ImageGallery = ({ images }) => {
           key={image.id}
           src={image.webformatURL}
           alt={image.tags}
+          onClick={() => onClickImage(image.largeImageURL, image.tags)}
         />
       ))}
     </ul>
