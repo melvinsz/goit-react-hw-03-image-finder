@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Modal = ({ showModal, onClose, src, alt }) => {
   return (
     showModal && (
@@ -10,3 +12,10 @@ const Modal = ({ showModal, onClose, src, alt }) => {
   );
 };
 export default Modal;
+
+Modal.propTypes = {
+  showModal: PropTypes.bool,
+  onClose: PropTypes.func,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};

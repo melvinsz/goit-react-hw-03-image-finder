@@ -20,7 +20,7 @@ class App extends Component {
   };
 
   handleChange = event => {
-    this.setState({ value: event.target.value });
+    this.setState({ value: event.target.value, page: 1 });
   };
 
   handleSubmit = event => {
@@ -79,6 +79,7 @@ class App extends Component {
 
   render() {
     const { loading, images, showModal, largeImageURL, alt } = this.state;
+
     return (
       <div className="app">
         <Searchbar onSubmit={this.handleSubmit} onChange={this.handleChange} />
